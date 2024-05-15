@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">BrandName</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" (click)="toggleCartPopover()">
+            <i class="fas fa-shopping-cart"></i> Cart
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Inside navbar.component.html -->
+<!-- Popover for Cart -->
+<div
+  [class]="isCartPopoverVisible ? 'd-block' : 'd-none'"
+  class="bg-light w-25 position-absolute end-0 p-2 rounded-2"
+>
+  <div class="popover-header">Cart</div>
+  <div class="popover-body">
+    <!-- Display cart items here -->
+    <!-- Replace this with actual cart item display logic -->
+    <p>Product 1</p>
+    <p>Product 2</p>
+  </div>
+</div>
