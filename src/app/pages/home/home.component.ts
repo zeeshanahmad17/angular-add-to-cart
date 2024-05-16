@@ -12,7 +12,14 @@ import { products } from '../../../globals';
 export class HomeComponent {
   // Dummy Product Data
   products: any[] = products;
-  categories: any[] = ['Mobiles', 'Laptops', 'Accessories', 'Clothes', 'Shoes'];
+  categories: any[] = [
+    'Mobiles',
+    'Laptops',
+    'Accessories',
+    'Clothes',
+    'Shoes',
+    'Caps',
+  ];
   selectedCategory: string = '';
   filteredProducts: any[] = [];
 

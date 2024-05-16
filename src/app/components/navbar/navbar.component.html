@@ -38,14 +38,23 @@
 <!-- Inside navbar.component.html -->
 <!-- Popover for Cart -->
 <div
-  [class]="isCartPopoverVisible ? 'd-block' : 'd-none'"
-  class="bg-light w-25 position-absolute end-0 p-2 rounded-2"
+  [class]="isCartPopoverVisible ? 'show' : ''"
+  class="dropdown-menu bg-light position-absolute end-0 p-2 rounded-2"
 >
-  <div class="popover-header">Cart</div>
-  <div class="popover-body">
-    <!-- Display cart items here -->
-    <!-- Replace this with actual cart item display logic -->
-    <p>Product 1</p>
-    <p>Product 2</p>
+  <div class="cart-item d-flex align-items-center justify-content-between mb-3">
+    <div class="d-flex align-items-center">
+      <img
+        src="product.imageUrl"
+        alt="Product Image"
+        class="cart-item-image me-3"
+      />
+      <div>
+        <p>
+          <strong>{{ "product.name" }}</strong>
+        </p>
+        <p>Quantity: {{ "product.quantity" }}</p>
+      </div>
+    </div>
+    <button class="btn btn-danger">Remove</button>
   </div>
 </div>
