@@ -1,7 +1,22 @@
-<div class="row my-3">
-  @for (item of products; track $index) {
-  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 gy-3">
-    <app-product-card [product]="item"></app-product-card>
+<div class="my-3">
+  <div class="d-flex gap-3 justify-content-center align-items-center">
+    @for (item of categories; track $index) {
+    <button
+      class="btn"
+      [class]="
+        selectedCategory === item ? 'btn-secondary' : 'btn-outline-secondary'
+      "
+      (click)="filterProducts(item)"
+    >
+      {{ item }}
+    </button>
+    }
   </div>
-  }
+  <div class="row">
+    @for (item of filteredProducts; track $index) {
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 gy-3">
+      <app-product-card [product]="item"></app-product-card>
+    </div>
+    }
+  </div>
 </div>

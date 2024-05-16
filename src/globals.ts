@@ -3,7 +3,7 @@ export const products: any[] = [
   {
     id: 1,
     name: 'Smartphone',
-    category: 'Electronics',
+    category: 'Mobiles',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     imageUrl:
       'https://androidcommunity.com/wp-content/uploads/2020/06/Samsung-Galaxy-Note-20-Flatter-Display.jpg',
@@ -16,7 +16,7 @@ export const products: any[] = [
   {
     id: 2,
     name: 'Laptop',
-    category: 'Electronics',
+    category: 'Laptops',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     imageUrl:
@@ -30,7 +30,7 @@ export const products: any[] = [
   {
     id: 3,
     name: 'Headphones',
-    category: 'Electronics',
+    category: 'Accessories',
     description:
       'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     imageUrl:
@@ -44,7 +44,7 @@ export const products: any[] = [
   {
     id: 4,
     name: 'T-shirt',
-    category: 'Fashion',
+    category: 'Clothes',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
     imageUrl:
@@ -58,7 +58,7 @@ export const products: any[] = [
   {
     id: 5,
     name: 'Bluetooth Speaker',
-    category: 'Electronics',
+    category: 'Accessories',
     description:
       'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     imageUrl:
@@ -72,7 +72,7 @@ export const products: any[] = [
   {
     id: 6,
     name: 'Running Shoes',
-    category: 'Fashion',
+    category: 'Shoes',
     description:
       'Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.',
     imageUrl:
