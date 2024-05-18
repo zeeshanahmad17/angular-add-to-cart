@@ -7,7 +7,7 @@ export const products: any[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     imageUrl:
       'https://androidcommunity.com/wp-content/uploads/2020/06/Samsung-Galaxy-Note-20-Flatter-Display.jpg',
-    totalAvailable: 50,
+    totalAvailable: 0,
     originalPrice: 599.99,
     discountedPrice: 499.99,
     discountPercentage: 20,

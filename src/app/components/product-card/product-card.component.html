@@ -7,7 +7,11 @@
   />
   <div class="card-body">
     <p class="card-text">
-      <strong>{{ product.totalAvailable }}</strong> Items left!
+      <strong>{{
+        product.totalAvailable
+          ? product.totalAvailable + "Items left!"
+          : "Out of Stock!"
+      }}</strong>
     </p>
     @if (product.discountPercentage) {
 
@@ -20,12 +24,16 @@
     </p>
     <h5 class="card-title">{{ product.name }}</h5>
     <p class="card-text">
-      <del class="text-muted">{{ product.originalPrice }}</del>
-      <strong>{{
-        product.discountedPrice
-          ? product.discountedPrice
-          : product.originalPrice
-      }}</strong>
+      @if (product.discountedPrice) {
+      <del class="text-muted">{{ product.originalPrice }}$</del>
+      }
+      <strong
+        >{{
+          product.discountedPrice
+            ? product.discountedPrice
+            : product.originalPrice
+        }}$</strong
+      >
     </p>
     <div class="d-flex mb-2">
       <div class="rating">
@@ -49,6 +57,13 @@
       </div>
       <span class="ms-2">({{ product.rating }})</span>
     </div>
-    <button class="btn btn-primary">Add to Cart</button>
+    <button
+      class="btn"
+      [class]="product.totalAvailable ? 'btn-primary' : 'btn-secondary'"
+      [disabled]="!product.totalAvailable"
+      (click)="addToCartHandler(product)"
+    >
+      {{ product.totalAvailable ? "Add to Cart" : "Out of Stock" }}
+    </button>
   </div>
 </div>
