@@ -9,7 +9,7 @@
     <p class="card-text">
       <strong>{{
         product.totalAvailable
-          ? product.totalAvailable + "Items left!"
+          ? product.totalAvailable + " items left!"
           : "Out of Stock!"
       }}</strong>
     </p>
@@ -40,19 +40,12 @@
         <!-- Render filled stars -->
         @for (i of [].constructor(getStarCount(product.rating)); track $index) {
         <ng-container>
-          <span class="star filled">&#9733;</span>
+          <i class="fa-solid fa-star"></i>
         </ng-container>
         }
         <!-- Render half-filled star if necessary -->
         @if (hasHalfStar(product.rating)) {
-        <i class="fa-duotone fa-star-half-stroke"></i>
-        }
-        <!-- Render unfilled stars -->
-        @for (i of [].constructor( 5 - getStarCount(product.rating) -
-        (hasHalfStar(product.rating) ? 1 : 0) ); track $index) {
-        <ng-container>
-          <i class="fa-solid fa-star-half-stroke"></i>
-        </ng-container>
+        <i class="fa-solid fa-star-half-stroke"></i>
         }
       </div>
       <span class="ms-2">({{ product.rating }})</span>

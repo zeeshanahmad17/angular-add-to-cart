@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+// Services
 import { ProductService } from '../../../services/product.service';
 
 @Component({

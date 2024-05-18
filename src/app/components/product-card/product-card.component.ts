@@ -1,4 +1,5 @@
 import { Component, Input, inject, input } from '@angular/core';
+// Services
 import { ProductService } from '../../../services/product.service';
 
 @Component({
@@ -15,12 +16,15 @@ export class ProductCardComponent {
 
   // Determine the number of filled stars based on the product's rating
   getStarCount(rating: number): number {
-    return Math.floor(rating); // Return the integer part of the rating (number of filled stars)
+    let stars: number = 0;
+    stars = Math.floor(rating); // Return the integer part of the rating (number of filled stars)
+    return stars;
   }
 
-  // Check if the rating has a decimal part (for half-filled star)
   hasHalfStar(rating: number): boolean {
-    return rating % 1 !== 0; // Returns true if there's a decimal part (half-filled star)
+    let halfStar: boolean = false;
+    halfStar = rating % 1 !== 0; // Returns true if there's a decimal part (half-filled star)
+    return halfStar;
   }
 
   addToCartHandler(product: any) {

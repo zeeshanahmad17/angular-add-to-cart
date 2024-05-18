@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+// Components
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
+// Globals
 import { products } from '../../../globals';
 
 @Component({
